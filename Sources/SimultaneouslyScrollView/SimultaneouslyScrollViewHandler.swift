@@ -1,5 +1,5 @@
 import Combine
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 #endif
 
@@ -8,7 +8,7 @@ import UIKit
 @available(tvOS 13, *)
 @available(macOS, unavailable)
 public protocol SimultaneouslyScrollViewHandler {
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
     /// Publisher to notify if the `ScrollView`s are scrolled to the bottom
     var scrolledToBottomPublisher: AnyPublisher<Bool, Never> { get }
 

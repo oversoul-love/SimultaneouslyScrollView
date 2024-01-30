@@ -5,7 +5,7 @@ import Foundation
 @available(tvOS 13, *)
 @available(macOS, unavailable)
 public class SimultaneouslyScrollViewHandlerFactory {
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
     /// Creates a new `SimultaneouslyScrollViewHandler` instance
     /// - Returns: A new `SimultaneouslyScrollViewHandler` instance
     public static func create() -> SimultaneouslyScrollViewHandler {
